@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.timer-container {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+}
+
+#display {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#time-input, #timer {
+    font-size: 3.5rem;
+    text-align: center;
+    background: transparent;
+    color: #4CAF50;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Courier New', monospace;
+    margin: 0.5rem 0;
+    padding: 5px 0;
+}
+
+#time-input {
+    color: #e0e0e0;
+    border-bottom: 2px solid #444;
+}
+
+#time-input::placeholder {
+    font-size: 1rem;
+    color: #666;
+    opacity: 0.7;
+}
+
+#action-btn {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #537D5D;
+    color: white;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+#action-btn.reset {
+    background-color: #652335;
+}
+
+.hidden {
+    display: none;
+}
+
+.timer-ended {
+    color: #ff5555;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 400px) {
+    #time-input, #timer {
+        font-size: 2.5rem;
+    }
+    
+    .timer-container {
+        width: 90%;
+    }
+}

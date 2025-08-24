@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймер</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timer-container">
+        <div id="display">
+            <input type="text" id="time-input" placeholder="Мин+Сек (1+30)" inputmode="numeric">
+            <div id="timer" class="hidden">00:00</div>
+        </div>
+        <button id="action-btn">Старт</button>
+    </div>
+
+    <audio id="alarm-sound" preload="auto">
+        <source src="sounds/alarm.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
